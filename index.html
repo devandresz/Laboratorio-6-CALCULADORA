@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora M8430</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="calculadora-contenedor">
+        <!-- Parte superior: Panel solar y Modelo -->
+        <div class="top-bar">
+            <div class="panel-solar" title="Panel Solar">
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="modelo">M8430</div>
+        </div>
+
+        <!-- Pantalla principal -->
+        <div class="pantalla-lcd">
+            <div class="inputs">
+                <span class="etiqueta">Nº 1:</span>
+                <input type="number" id="num1" placeholder="----">
+                <span class="etiqueta">Nº 2:</span>
+                <input type="number" id="num2" placeholder="----">
+            </div>
+            <div class="resultado-box">
+                <span class="lbl-resultado">RES:</span>
+                <span id="resultado">0</span>
+            </div>
+        </div>
+
+        <!-- Teclado de funciones -->
+        <div class="botones">
+            <button onclick="calcular('sumar')" class="btn-op">+</button>
+            <button onclick="calcular('restar')" class="btn-op">-</button>
+            <button onclick="calcular('multiplicar')" class="btn-op">×</button>
+            <button onclick="calcular('dividir')" class="btn-op">÷</button>
+            <button onclick="calcular('promedio')" class="btn-op">PROM</button>
+            <button onclick="calcular('potencia')" class="btn-op">xʸ</button>
+            <button onclick="limpiar()" class="btn-clear">C</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
